@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: tan;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.xbox {
+  background-image: url("images/xbox.jpg");
+}
+
+.ps {
+  background-image: url("images/ps.jpg");
+}
+
+.xbox,
+.ps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  color: white;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.7s ease-out;
+  position: relative;
+}
+
+.xbox::before,
+.ps::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.xbox::before {
+  background-color: rgba(43, 43, 43, 0.7);
+}
+
+.ps::before {
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+.xbox > span,
+.ps > span {
+  font-size: 4rem;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.xbox > button,
+.ps > button {
+  z-index: 2;
+  font-size: 1rem;
+  margin: 3rem 1rem;
+  font-weight: 700;
+  color: white;
+  border: 4px solid white;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 1.5rem 4rem;
+  transition: all 0.1s linear;
+}
+
+.xbox > button:hover {
+  background-color: rgba(28, 122, 28, 1);
+  border-color: rgba(28, 122, 28, 1);
+}
+
+.ps > button:hover {
+  background-color: rgba(87, 84, 236, 1);
+  border-color: rgba(87, 84, 236, 1);
+}
+
+.shrink {
+  width: 30vw;
+}
+
+.expand {
+  width: 70vw;
+}
