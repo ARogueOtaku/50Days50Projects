@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(60, 146, 146);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgb(4, 85, 85);
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inpcont {
+  margin: 1em 2em;
+  position: relative;
+  overflow: visible;
+}
+
+.inpcont > label {
+  position: absolute;
+  color: rgb(252, 242, 225);
+  padding: 0.5em 0;
+  font-size: large;
+  overflow: visible;
+  left: 0;
+}
+
+input + label > span {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: inline-block;
+}
+
+input:focus + label > span,
+input:valid + label > span {
+  transform: translateY(-1.5em);
+  color: rgb(178, 235, 216);
+}
+
+input {
+  border: none;
+  width: 15em;
+  outline: none;
+  font-size: larger;
+  background-color: transparent;
+  color: rgb(252, 242, 225);
+  padding: 0.5em 0;
+  border-bottom: 2px solid rgb(252, 242, 225);
+}
+
+h1 {
+  color: rgb(252, 242, 225);
+  margin: 1em;
+}
+
+.button {
+  background-color: rgb(178, 235, 216);
+  border: none;
+  color: rgb(4, 85, 85);
+  margin: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.register {
+  color: rgb(252, 242, 225);
+  margin: 0.5em 2em;
+  margin-bottom: 2em;
+}
+
+.register > a {
+  text-decoration: none;
+  color: rgb(178, 235, 216);
+}
