@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 144, 104);
+}
+
+.container {
+  background-color: cornsilk;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 50em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.title {
+  color: rgb(138, 138, 138);
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 2px;
+  margin-top: 2em;
+}
+
+.joke {
+  font-size: 2em;
+  margin: 1em;
+}
+
+.getjoke {
+  font-size: 1em;
+  outline: none;
+  border: none;
+  background-color: rgb(238, 118, 75);
+  color: cornsilk;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  padding: 0.7em 1em;
+}
+
+.getjoke:active {
+  transform: scale(0.93);
+}
+
+.disabled {
+  cursor: not-allowed;
+  background-color: rgb(245, 199, 182);
+  box-shadow: none;
+}
