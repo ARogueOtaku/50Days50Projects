@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(212, 212, 212);
+  overflow-y: auto;
+}
+
+.vanish {
+  display: none;
+}
+
+.container {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 1.8em;
+  margin: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+
+.faq {
+  padding: 2em;
+  background-color: rgb(230, 230, 230);
+  margin: 1em;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgb(161, 161, 161);
+  transition: all 0.2s linear;
+}
+
+.faq > .answer {
+  display: none;
+}
+
+.faq > .opener {
+  display: inline-block;
+}
+
+.faq > .closer {
+  display: none;
+}
+
+.faq-active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255);
+}
+
+.faq.faq-active > .answer {
+  display: block;
+}
+
+.faq.faq-active > .opener {
+  display: none;
+}
+
+.faq.faq-active > .closer {
+  display: inline-block;
+}
+
+.question {
+  font-weight: 700;
+  min-width: fit-content;
+  width: 35vw;
+  margin-right: 2em;
+  text-align: start;
+}
+
+.answer {
+  min-width: fit-content;
+  text-align: start;
+  width: 35vw;
+  margin-top: 2em;
+}
+
+.toggler {
+  position: absolute;
+  cursor: pointer;
+  right: 2em;
+  font-weight: 800;
+  top: 1.7em;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.closer {
+  background-color: rgb(165, 165, 165);
+  color: white;
+  padding: 0.4em;
+}
+
+@media (max-width: 768px) {
+  .question,
+  .answer {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .question,
+  .answer {
+    width: 60vw;
+  }
+}
