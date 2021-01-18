@@ -4,6 +4,10 @@ const path = require("path");
 
 app.use("/", express.static(path.join(__dirname, "/public")));
 
+app.get("*", (req, res) => {
+  res.redirect("/");
+});
+
 app.listen(process.env.PORT || 3030, () => {
   console.log(`App Started at PORT: ${process.env.PORT || 3030}`);
 });
